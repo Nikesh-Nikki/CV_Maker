@@ -5,5 +5,8 @@ import Input from './Input.jsx';
 
 export default function Name (props){
     const [name,setName]=useState('NikkiBucky');
-    return <Input className='name' value={name}/>;
+    function nameChange(event){
+        setName(event.target.value);
+    }
+    return <Input className='name' callback= {nameChange} value={name}/>;
 }

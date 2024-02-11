@@ -1,6 +1,11 @@
 import React from 'react'; 
+import { useState } from 'react';
 import Input from './Input.jsx';
 
 export default function Post (props){
-    return <Input className='post' value='Front End Developer'/>
+    const [post,setPost]=useState('Front End Dev');
+    function changePost(event){
+        setPost(event.target.value);
+    }
+    return <Input className='post' callback = {changePost} value={post}/>
 }

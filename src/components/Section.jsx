@@ -14,10 +14,23 @@ const defaultEntry = {
     desc : 'desc'
 };
 
+
+
 export default function Section(props){
     const [entries,setEntries]=useState([]);
     function addEntry(){
-        setEntries([...entries,defaultEntry]);
+        setEntries([...entries,{...defaultEntry,id:entries.length+1}]);
+    }
+    function inputOnChange(event){
+        setEntries(
+            entries.map((entry)=>{
+                if(entry.id==event.target.dataset.id){
+                    console.log(event.target.dataset.role);
+                    entry[event.target.dataset.role]=event.target.value;
+                    return entry;
+                }else return entry;
+            })
+        );
     }
     return <div className="section">
         <div className='topSection'>
@@ -25,7 +38,7 @@ export default function Section(props){
             <PlusButton callback={addEntry}/>
         </div>
         {
-            entries.map((entry)=><Entry {...entry}/>)
+            entries.map((entry)=><Entry {...entry} key={entry.id} id={entry.id} callback={inputOnChange}/>)
         }
     </div>;
 }
