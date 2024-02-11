@@ -1,8 +1,6 @@
 import React from 'react'; 
-
+import Input from './Input.jsx';
 
 export default function Post (props){
-return <div className='post'>
-    <h3>{props.post}</h3> 
-</div>
+    return <Input className='post' value='Front End Developer'/>
 }
