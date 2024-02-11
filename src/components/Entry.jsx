@@ -5,10 +5,10 @@ import Input from './Input.jsx';
 export default function Entry (props){
     return (
         <div className='entry'>
-            <Input className='entry-start-date' />
-            <Input className='entry-end-date' />
-            <Input className='entry-title'/>
-            <Input classNam='entry-desc' />
+            <Input className='entry-start-date' value={props.startDate}/>
+            <Input className='entry-end-date' value={props.endDate}/>
+            <Input className='entry-title' value={props.title}/>
+            <Input classNam='entry-desc' value={props.desc}/>
         </div>
     );
 }

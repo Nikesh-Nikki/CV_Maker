@@ -1,8 +1,9 @@
 import React from 'react'; 
+import { useState } from 'react';
+import Input from './Input.jsx';
 
 
 export default function Name (props){
-    return <div className='name'>
-        <h2>{props.name}</h2>
-    </div>;
+    const [name,setName]=useState('NikkiBucky');
+    return <Input className='name' value={name}/>;
 }

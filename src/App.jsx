@@ -10,6 +10,7 @@ export default function App(){
             <Name name='Nikesh Tadela'/>
             <Post post='Front End Dev' />
             <Section title='Education' />
+            <Section title = 'Experience' />
         </Doc>
     );
 }

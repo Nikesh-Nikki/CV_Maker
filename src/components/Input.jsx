@@ -1,6 +1,8 @@
-import React from 'react'; 
+import React, { useState } from 'react'; 
 
 
 export default function Input (props){
-    return <input type='text' className={props.className} />
+    const [value,setValue]=useState(props.value);
+    return <input type='text' onChange={(e)=>setValue(e.target.value)}
+    className={props.className} value={value}/>
 }
