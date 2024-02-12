@@ -7,8 +7,10 @@ import Section from "./components/Section.jsx";
 export default function App(){
     return (
         <Doc>
-            <Name name='Nikesh Tadela'/>
-            <Post post='Front End Dev' />
+            <div id="header">
+                <Name name='Nikesh Tadela'/>
+                <Post post='Front End Dev' />
+            </div>
             <Section title='Education' />
             <Section title = 'Experience' />
         </Doc>

@@ -4,7 +4,7 @@ import Input from './Input.jsx';
 
 
 export default function Name (props){
-    const [name,setName]=useState('NikkiBucky');
+    const [name,setName]=useState(props.name);
     function nameChange(event){
         setName(event.target.value);
     }

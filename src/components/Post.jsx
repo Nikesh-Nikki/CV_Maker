@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Input from './Input.jsx';
 
 export default function Post (props){
-    const [post,setPost]=useState('Front End Dev');
+    const [post,setPost]=useState(props.post);
     function changePost(event){
         setPost(event.target.value);
     }

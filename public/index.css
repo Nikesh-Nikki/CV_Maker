@@ -1,27 +1,5 @@
-body{
-    
-}
-
-/* doc */
-#doc {
-    width: min(90vw,850px);
-    margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 25px;
-}
-/* styles on section */
-.section{
-
-}
-
-.topSection{
-
-}
-
-/* name and post */
-.name,.post {
-    height: 50px;
-    font-size: 25px;
+* {
+    font-family: 'Times New Roman', Times, serif;
 }
 
 
@@ -30,6 +8,7 @@ input{
     border: 0px;
     color: inherit;
     box-sizing:border-box;
+    --webkit-appearance : none;
 }
 
 input.editable{
@@ -40,6 +19,52 @@ input:focus{
     outline: none;
     border-bottom: 2px solid black;
 }
+
+
+body{
+    
+}
+
+/* doc */
+#doc {
+    width: min(90vw,850px);
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px 25px;
+}
+
+/* header */
+#header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* name and post */
+.name {
+    font-weight: 150;
+    font-size: 50px;
+}
+
+.post{
+    font-size: 30px;
+}
+
+.name,.post{
+    text-align: center; 
+}
+
+/* styles on section */
+.section{
+
+}
+
+.topSection{
+
+}
+
+
 
 /* styles on an entry */
 .entry{
