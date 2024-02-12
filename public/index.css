@@ -20,13 +20,27 @@ input:focus{
     border-bottom: 2px solid black;
 }
 
+/* button */
+button{
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* h2 */
+
+h2{
+    margin: 0px;
+}
 
 body{
-    
+    background-color: rgb(22, 19, 19);
 }
 
 /* doc */
 #doc {
+    background-color: white;
     width: min(90vw,850px);
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -61,9 +75,23 @@ body{
 }
 
 .topSection{
-
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 2px black solid;
 }
 
+.topSection h2 {
+    height: min-content;
+}
+
+.add {
+    font-size: 2rem;
+}
+
+.add:hover{
+    cursor: pointer;
+}
 
 
 /* styles on an entry */
