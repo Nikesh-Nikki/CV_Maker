@@ -18,16 +18,15 @@ const defaultEntry = {
 
 export default function Section(props){
     const [entries,setEntries]=useState([]);
+    const [mouseIn,setMouseIn]=useState(false);
     function addEntry(){
         setEntries([...entries,{...defaultEntry,id:entries.length+1}]);
     }
     function mouseOverHandler(event){
-        let temp=event.target.querySelector('.add');
-        if(temp) temp.classList.add('opaque');
+        setMouseIn(true);
     }
     function mouseLeaveHandler(event){
-        let temp=event.target.querySelector('.add');
-        if(temp) temp.classList.remove('opaque');
+        setMouseIn(false);
     }
     function inputOnChange(event){
         setEntries(
@@ -46,7 +45,7 @@ export default function Section(props){
                     onMouseLeave ={mouseLeaveHandler}
                 >
                     <h2>{props.title}</h2>
-                    <PlusButton callback={addEntry}/>
+                    <PlusButton callback={addEntry} visibility={mouseIn?'opaque':'transparent'}/>
                 </div>
                 {
                     entries.map((entry)=><Entry {...entry} key={entry.id} id={entry.id} callback={inputOnChange}/>)
