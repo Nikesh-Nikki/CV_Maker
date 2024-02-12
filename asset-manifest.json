@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/CV_Maker/static/js/main.7248adbd.js",
+    "index.html": "/CV_Maker/index.html",
+    "main.7248adbd.js.map": "/CV_Maker/static/js/main.7248adbd.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.7248adbd.js"
+  ]
+}

@@ -1,0 +1,127 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* input */
+input{
+    border: 0px;
+    color: inherit;
+    box-sizing:border-box;
+    --webkit-appearance : none;
+}
+
+input.editable{
+    border-bottom: solid gray 2px;
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+/* button */
+button{
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* h2 */
+
+h2{
+    margin: 0px;
+}
+
+body{
+    background-color: rgb(22, 19, 19);
+}
+
+/* doc */
+#doc {
+    background-color: white;
+    width: min(90vw,850px);
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px 25px;
+}
+
+/* header */
+#header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* name and post */
+.name {
+    font-weight: 150;
+    font-size: 50px;
+}
+
+.post{
+    font-size: 30px;
+}
+
+.name,.post{
+    text-align: center; 
+}
+
+/* styles on section */
+.section{
+
+}
+
+.topSection{
+    padding-left: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 2px black solid;
+}
+
+.topSection h2 {
+    height: min-content;
+}
+
+.add {
+    font-size: 2rem;
+    transition: background-color ease 300ms,opacity ease 300ms;
+    border-radius: 10% 30%;
+}
+
+.add:hover{
+    background-color: #CECECE;
+}
+
+.add:hover{
+    cursor: pointer;
+}
+
+
+/* styles on an entry */
+.entry{
+
+}
+
+.entry-start-date{
+
+}
+
+.entry-end-date{
+
+}
+
+.entry-desc{
+
+}
+
+.transparent{
+    opacity: 0;
+}
+
+.opaque{
+    opacity: 1;
+}
