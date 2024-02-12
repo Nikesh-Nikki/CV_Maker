@@ -21,6 +21,14 @@ export default function Section(props){
     function addEntry(){
         setEntries([...entries,{...defaultEntry,id:entries.length+1}]);
     }
+    function mouseOverHandler(event){
+        let temp=event.target.querySelector('.add');
+        if(temp) temp.classList.add('opaque');
+    }
+    function mouseLeaveHandler(event){
+        let temp=event.target.querySelector('.add');
+        if(temp) temp.classList.remove('opaque');
+    }
     function inputOnChange(event){
         setEntries(
             entries.map((entry)=>{
@@ -33,12 +41,15 @@ export default function Section(props){
         );
     }
     return <div className="section">
-        <div className='topSection'>
-            <h2>{props.title}</h2>
-            <PlusButton callback={addEntry}/>
-        </div>
-        {
-            entries.map((entry)=><Entry {...entry} key={entry.id} id={entry.id} callback={inputOnChange}/>)
-        }
-    </div>;
+                <div className='topSection' 
+                    onMouseOver={mouseOverHandler}
+                    onMouseLeave ={mouseLeaveHandler}
+                >
+                    <h2>{props.title}</h2>
+                    <PlusButton callback={addEntry}/>
+                </div>
+                {
+                    entries.map((entry)=><Entry {...entry} key={entry.id} id={entry.id} callback={inputOnChange}/>)
+                }
+            </div>;
 }
