@@ -80,10 +80,13 @@ body{
     align-items: flex-end;
     justify-content: space-between;
     border-bottom: 2px black solid;
+    margin-bottom: 20px;
 }
 
 .topSection h2 {
     height: min-content;
+    font-size: 30px;
+    font-weight: lighter;
 }
 
 .add {
@@ -103,18 +106,42 @@ body{
 
 /* styles on an entry */
 .entry{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 220px auto;
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.entry input {
+    font-size: 20px;
+}
+
+.duration{
+    display: flex;
+    justify-content: space-between;
+}
+
+.startDate,.endDate{
+    font-size: 20px!important;
+    width:100px;
+    /* height: 25px; */
+}
+
+.duration p{
+    padding: 5px;
+    margin : 0;
+}
+
+.endDate{
 
 }
 
-.entry-start-date{
-
+.desc{
+    grid-column: span 2;
 }
 
-.entry-end-date{
-
-}
-
-.entry-desc{
+.title{
 
 }
 
