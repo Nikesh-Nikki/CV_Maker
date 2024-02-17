@@ -20,7 +20,14 @@ export default function Section(props){
     const [entries,setEntries]=useState([]);
     const [mouseIn,setMouseIn]=useState(false);
     function addEntry(){
-        setEntries([...entries,{...defaultEntry,id:entries.length+1}]);
+        let id=entries.length?(entries[entries.length-1].id+1):0;
+        setEntries([...entries,{...defaultEntry,id}]);
+    }
+    function deleteEntry(event){
+        console.log(event.target.dataset.id);
+        setEntries(
+            entries.filter((entry)=>entry.id!=event.target.dataset.id)
+        );
     }
     function mouseOverHandler(event){
         setMouseIn(true);
@@ -48,7 +55,7 @@ export default function Section(props){
                     <PlusButton callback={addEntry} visibility={mouseIn?'opaque':'transparent'}/>
                 </div>
                 {
-                    entries.map((entry)=><Entry {...entry} key={entry.id} id={entry.id} callback={inputOnChange}/>)
+                    entries.map((entry)=><Entry {...entry} key={entry.id} id={entry.id} callback={inputOnChange} delEntry={deleteEntry}/>)
                 }
             </div>;
 }

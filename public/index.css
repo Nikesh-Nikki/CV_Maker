@@ -107,14 +107,22 @@ body{
 /* styles on an entry */
 .entry{
     display: grid;
-    width: 100%;
+    position: relative;
     grid-template-columns: 220px auto;
     padding-left: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-bottom: 20px;
+    transition: background-color 0.15s;
+}
+
+.entry:hover{
+    background-color: #CECECE;
 }
 
 .entry input {
     font-size: 20px;
+    background-color: transparent;
 }
 
 .duration{
@@ -151,4 +159,20 @@ body{
 
 .opaque{
     opacity: 1;
+}
+
+.btn-close{
+    position: absolute;
+    top: 5px;
+    right : 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.entry:hover .btn-close {
+    display: block;
+}
+
+.btn-close:hover{
+    color: red;
 }
