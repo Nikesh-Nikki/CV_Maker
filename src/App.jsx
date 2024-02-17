@@ -8,8 +8,8 @@ export default function App(){
     return (
         <Doc>
             <div id="header">
-                <Name name='Nikesh Tadela'/>
-                <Post post='Front End Dev' />
+                <Name name='Nikesh Tadela' pholder="Type Name Here"/>
+                <Post post='Front End Dev' pholder="Designation goes here"/>
             </div>
             <Section title='Education' />
             <Section title = 'Experience' />

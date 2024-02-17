@@ -7,5 +7,5 @@ export default function Post (props){
     function changePost(event){
         setPost(event.target.value);
     }
-    return <Input className='post' callback = {changePost} value={post}/>
+    return <Input className='post' callback = {changePost} pholder={props.pholder} value={post}/>
 }

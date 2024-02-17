@@ -8,5 +8,5 @@ export default function Name (props){
     function nameChange(event){
         setName(event.target.value);
     }
-    return <Input className='name' callback= {nameChange} value={name}/>;
+    return <Input className='name' callback= {nameChange} pholder={props.pholder} value={name}/>;
 }
